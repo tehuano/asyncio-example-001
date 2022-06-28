@@ -29,11 +29,6 @@
 //                |                 |
 //                |                 |
 //
-//   Nima Eskandari
-//   Texas Instruments Inc.
-//   April 2017
-//   Built with CCS V7.0
-//
 //******************************************************************************
 //         /|\           /|\ /|\
 //          |   TMP100   10k 10k     MSP430F5529
@@ -51,28 +46,10 @@
 #include <stdint.h>
 #include <stdbool.h>
 
-
-//******************************************************************************
-// Example Commands ************************************************************
-//******************************************************************************
-
-/* CMD_TYPE_X_SLAVE are example commands the master sends to the slave.
- * The slave will send example SlaveTypeX buffers in response.
- *
- * CMD_TYPE_X_MASTER are example commands the master sends to the slave.
- * The slave will initialize itself to receive MasterTypeX example buffers.
- * */
-
 #define TMP100_ADDR 0x4F
 #define EEPROM24FC256_ADDR 0x57
 
 #define MAX_BUFFER_SIZE 20
-
-/* MasterTypeX are example buffers initialized in the master, they will be
- * sent by the master to the slave.
- * SlaveTypeX are example buffers initialized in the slave, they will be
- * sent by the slave to the master.
- * */
 
 uint8_t temperature_reg_addr = 0x00;
 uint8_t temperature_read_buffer[2] = {0, 0};
